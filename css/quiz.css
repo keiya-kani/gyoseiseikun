@@ -1,0 +1,141 @@
+/* === Quiz setup screen === */
+.quiz-setup h2 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-6);
+}
+
+/* === Quiz in-progress === */
+.quiz-progress-bar {
+  margin-bottom: var(--space-4);
+}
+
+.quiz-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.quiz-question-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-4);
+}
+
+.quiz-subject-tag {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-3);
+}
+
+.quiz-question-text {
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+
+.quiz-submit-row {
+  margin-top: var(--space-5);
+}
+
+/* === Quiz result === */
+.quiz-final-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.quiz-final-score {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.quiz-final-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+/* === Essay === */
+.essay-question-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-4);
+}
+
+.essay-question-text {
+  font-size: var(--font-size-base);
+  line-height: 1.75;
+  margin-bottom: var(--space-5);
+}
+
+.essay-char-count {
+  text-align: right;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+}
+
+.essay-model-answer {
+  background: #f0f9ff;
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.essay-model-answer h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.essay-self-eval {
+  margin-top: var(--space-5);
+}
+
+.essay-self-eval h3 {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  margin-bottom: var(--space-3);
+}
+
+.eval-btn-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.eval-btn {
+  height: 56px;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  border: 2px solid transparent;
+  transition: opacity 0.1s, transform 0.1s;
+}
+
+.eval-btn:active { transform: scale(0.96); opacity: 0.8; }
+.eval-btn-good { background: var(--color-success-light); color: var(--color-success); border-color: var(--color-success); }
+.eval-btn-ok { background: #fef3c7; color: var(--color-warning); border-color: var(--color-warning); }
+.eval-btn-bad { background: var(--color-danger-light); color: var(--color-danger); border-color: var(--color-danger); }

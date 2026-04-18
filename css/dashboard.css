@@ -1,0 +1,204 @@
+/* === Dashboard === */
+.dashboard-section {
+  margin-bottom: var(--space-6);
+}
+
+.dashboard-section-title {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: var(--font-size-xs);
+  margin-bottom: var(--space-3);
+}
+
+.subject-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.subject-item {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+
+.subject-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2);
+}
+
+.subject-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.subject-score {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.subject-attempts {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-1);
+}
+
+/* === History list === */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.history-item {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.history-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.history-subject {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.history-score {
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+
+/* === Calculator === */
+.calc-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-4);
+}
+
+.calc-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.calc-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.calc-row label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  min-width: 100px;
+}
+
+.calc-input {
+  flex: 1;
+  padding: 0 var(--space-3);
+  height: 48px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  text-align: center;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.calc-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-light);
+}
+
+.calc-result-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.calc-result-score {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.calc-result-unit {
+  font-size: var(--font-size-base);
+  color: var(--color-text-muted);
+  margin-left: var(--space-1);
+}
+
+.calc-result-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.calc-pass-badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-6);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-lg);
+  font-weight: 800;
+}
+
+.calc-pass-badge.pass { background: var(--color-success-light); color: var(--color-success); }
+.calc-pass-badge.fail { background: var(--color-danger-light); color: var(--color-danger); }
+
+.calc-breakdown {
+  margin-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.calc-breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.calc-breakdown-item:last-child { border-bottom: none; }
+.calc-breakdown-label { color: var(--color-text-muted); }
+.calc-breakdown-value { font-weight: 700; }

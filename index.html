@@ -17,108 +17,59 @@
   <link rel="stylesheet" href="css/high-contrast.css">
 </head>
 <body>
-  <!-- スキップリンク -->
-  <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-
   <!-- スクリーンリーダー用ライブリージョン -->
   <div aria-live="polite" aria-atomic="true" id="live-polite" class="sr-only"></div>
   <div aria-live="assertive" aria-atomic="true" id="live-assertive" class="sr-only"></div>
 
-  <header role="banner" class="app-header">
-    <div class="header-inner">
-      <h1 class="app-title">行政書士試験 完全攻略</h1>
-      <div class="header-controls">
-        <button id="btn-contrast" class="icon-btn" aria-pressed="false" title="高コントラスト切替 (Alt+H)">
-          <span aria-hidden="true">◐</span>
-          <span class="sr-only">高コントラスト切替</span>
-        </button>
-        <button id="btn-fontsize" class="icon-btn" aria-label="文字サイズ切替 (Alt+F)" title="文字サイズ切替 (Alt+F)">
-          <span aria-hidden="true">A</span>
-        </button>
-        <button id="btn-help" class="icon-btn" aria-label="キーボードショートカット一覧 (?)" title="ショートカット一覧 (?)">
-          <span aria-hidden="true">?</span>
-        </button>
-      </div>
+  <!-- ヘッダー (コンパクト) -->
+  <header class="app-header" role="banner">
+    <h1 class="app-title">行政書士試験</h1>
+    <div class="header-actions">
+      <button id="btn-contrast" class="icon-btn" aria-pressed="false" aria-label="高コントラスト切替">◐</button>
+      <button id="btn-fontsize" class="icon-btn" aria-label="文字サイズ切替">A</button>
     </div>
   </header>
 
-  <nav role="navigation" aria-label="メインメニュー" class="main-nav">
-    <ul role="list" class="nav-list">
-      <li><a href="#home" class="nav-link" data-page="home" aria-current="page" aria-label="ホーム">
-        <span class="nav-icon" aria-hidden="true">🏠</span>
-        <span class="nav-label">ホーム</span>
-      </a></li>
-      <li><a href="#quiz" class="nav-link" data-page="quiz" aria-label="択一式演習">
-        <span class="nav-icon" aria-hidden="true">📝</span>
-        <span class="nav-label">択一式</span>
-      </a></li>
-      <li><a href="#essay" class="nav-link" data-page="essay" aria-label="記述式演習">
-        <span class="nav-icon" aria-hidden="true">✍️</span>
-        <span class="nav-label">記述式</span>
-      </a></li>
-      <li><a href="#flashcard" class="nav-link" data-page="flashcard" aria-label="暗記カード">
-        <span class="nav-icon" aria-hidden="true">🃏</span>
-        <span class="nav-label">暗記</span>
-      </a></li>
-      <li><a href="#dashboard" class="nav-link" data-page="dashboard" aria-label="進捗ダッシュボード">
-        <span class="nav-icon" aria-hidden="true">📊</span>
-        <span class="nav-label">進捗</span>
-      </a></li>
-      <li><a href="#calculator" class="nav-link" data-page="calculator" aria-label="採点計算機">
-        <span class="nav-icon" aria-hidden="true">🧮</span>
-        <span class="nav-label">採点</span>
-      </a></li>
-    </ul>
-  </nav>
-
-  <main id="main-content" role="main" tabindex="-1" class="main-content">
+  <!-- メインコンテンツ -->
+  <main id="main-content" class="main-content" role="main" tabindex="-1">
     <!-- ページコンテンツはJSで動的に挿入 -->
   </main>
 
-  <!-- キーボードショートカット モーダル -->
-  <div id="modal-shortcuts" role="dialog" aria-modal="true" aria-labelledby="modal-shortcuts-title" class="modal" hidden>
-    <div class="modal-inner">
-      <h2 id="modal-shortcuts-title">キーボードショートカット</h2>
-      <dl class="shortcut-list">
-        <div class="shortcut-group">
-          <dt class="shortcut-group-title">全ページ共通</dt>
-          <dd><kbd>?</kbd> — ショートカット一覧</dd>
-          <dd><kbd>Alt</kbd>+<kbd>1</kbd> — ホーム</dd>
-          <dd><kbd>Alt</kbd>+<kbd>2</kbd> — 択一式演習</dd>
-          <dd><kbd>Alt</kbd>+<kbd>3</kbd> — 記述式演習</dd>
-          <dd><kbd>Alt</kbd>+<kbd>4</kbd> — 暗記カード</dd>
-          <dd><kbd>Alt</kbd>+<kbd>5</kbd> — 進捗ダッシュボード</dd>
-          <dd><kbd>Alt</kbd>+<kbd>6</kbd> — 採点計算機</dd>
-          <dd><kbd>Alt</kbd>+<kbd>H</kbd> — 高コントラスト切替</dd>
-          <dd><kbd>Alt</kbd>+<kbd>F</kbd> — 文字サイズ切替</dd>
-        </div>
-        <div class="shortcut-group">
-          <dt class="shortcut-group-title">択一式演習中</dt>
-          <dd><kbd>1</kbd>〜<kbd>5</kbd> — 選択肢を選択</dd>
-          <dd><kbd>Enter</kbd> — 回答を確定</dd>
-          <dd><kbd>Space</kbd> — 解説を展開/折り畳む</dd>
-          <dd><kbd>N</kbd> — 次の問題</dd>
-          <dd><kbd>P</kbd> — 前の問題</dd>
-          <dd><kbd>Escape</kbd> — 演習を終了</dd>
-        </div>
-        <div class="shortcut-group">
-          <dt class="shortcut-group-title">暗記カード中</dt>
-          <dd><kbd>Space</kbd> / <kbd>Enter</kbd> — カードをめくる</dd>
-          <dd><kbd>0</kbd>〜<kbd>3</kbd> — 定着度を評価</dd>
-          <dd><kbd>→</kbd> — 次のカードへスキップ</dd>
-        </div>
-      </dl>
-      <button id="modal-shortcuts-close" class="btn btn-primary">閉じる</button>
-    </div>
+  <!-- ボトムナビゲーション (スマホ向け) -->
+  <nav class="bottom-nav" role="navigation" aria-label="メインメニュー">
+    <a href="#home" class="nav-item" data-page="home" aria-current="page" aria-label="ホーム">
+      <span class="nav-icon" aria-hidden="true">🏠</span>
+      <span class="nav-label">ホーム</span>
+    </a>
+    <a href="#quiz" class="nav-item" data-page="quiz" aria-label="択一式演習">
+      <span class="nav-icon" aria-hidden="true">📝</span>
+      <span class="nav-label">択一式</span>
+    </a>
+    <a href="#essay" class="nav-item" data-page="essay" aria-label="記述式演習">
+      <span class="nav-icon" aria-hidden="true">✍️</span>
+      <span class="nav-label">記述式</span>
+    </a>
+    <a href="#flashcard" class="nav-item" data-page="flashcard" aria-label="暗記カード">
+      <span class="nav-icon" aria-hidden="true">🃏</span>
+      <span class="nav-label">暗記</span>
+    </a>
+    <a href="#dashboard" class="nav-item" data-page="dashboard" aria-label="進捗ダッシュボード">
+      <span class="nav-icon" aria-hidden="true">📊</span>
+      <span class="nav-label">進捗</span>
+    </a>
+    <a href="#calculator" class="nav-item" data-page="calculator" aria-label="採点計算機">
+      <span class="nav-icon" aria-hidden="true">🧮</span>
+      <span class="nav-label">採点</span>
+    </a>
+  </nav>
+
+  <!-- データエクスポートボタン (フッター代替) -->
+  <div id="export-bar" class="export-bar" hidden>
+    <button id="btn-export" class="btn btn-sm btn-outline">学習データをエクスポート</button>
   </div>
 
   <!-- オーバーレイ -->
   <div id="modal-overlay" class="modal-overlay" hidden aria-hidden="true"></div>
-
-  <footer role="contentinfo" class="app-footer">
-    <p>行政書士試験 完全攻略 — データはブラウザに保存されます</p>
-    <button id="btn-export" class="btn btn-sm">学習データをエクスポート</button>
-  </footer>
 
   <!-- スクリプト -->
   <script src="js/storage.js"></script>

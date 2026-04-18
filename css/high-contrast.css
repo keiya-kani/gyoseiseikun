@@ -1,0 +1,106 @@
+/* === High Contrast Mode === */
+.high-contrast {
+  --color-primary: #0000cc;
+  --color-primary-dark: #000099;
+  --color-primary-light: #e8e8ff;
+  --color-success: #006600;
+  --color-success-light: #e6ffe6;
+  --color-danger: #cc0000;
+  --color-danger-light: #ffe6e6;
+  --color-warning: #996600;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #000000;
+  --color-text: #000000;
+  --color-text-muted: #333333;
+  --color-text-inverse: #ffffff;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+.high-contrast .card,
+.high-contrast .quiz-question-card,
+.high-contrast .flashcard-face,
+.high-contrast .stat-card,
+.high-contrast .menu-card,
+.high-contrast .subject-item,
+.high-contrast .history-item,
+.high-contrast .calc-card,
+.high-contrast .calc-result-card,
+.high-contrast .essay-question-card,
+.high-contrast .quiz-final-card {
+  border: 2px solid #000000;
+  box-shadow: none;
+}
+
+.high-contrast .bottom-nav,
+.high-contrast .app-header {
+  border-color: #000000;
+  box-shadow: none;
+}
+
+.high-contrast .choice-item {
+  border-color: #000000;
+}
+
+.high-contrast .btn-primary {
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+}
+
+.high-contrast .btn-secondary {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+}
+
+.high-contrast .btn-outline {
+  border-color: #000000;
+  color: #000000;
+}
+
+.high-contrast .icon-btn {
+  border: 2px solid #000000;
+  background: #ffffff;
+  color: #000000;
+}
+
+.high-contrast .nav-item {
+  color: #333333;
+}
+
+.high-contrast .nav-item[aria-current="page"],
+.high-contrast .nav-item.active {
+  color: #0000cc;
+}
+
+.high-contrast .progress-bar {
+  background: #cccccc;
+  border: 1px solid #000000;
+}
+
+.high-contrast .form-select,
+.high-contrast .form-input,
+.high-contrast .form-textarea,
+.high-contrast .calc-input {
+  border-color: #000000;
+}
+
+/* High contrast: prefer system */
+@media (prefers-color-scheme: dark) {
+  .high-contrast {
+    --color-bg: #000000;
+    --color-surface: #111111;
+    --color-border: #ffffff;
+    --color-text: #ffffff;
+    --color-text-muted: #cccccc;
+    --color-primary: #6699ff;
+    --color-primary-light: #001133;
+    --color-success: #66ff66;
+    --color-success-light: #003300;
+    --color-danger: #ff6666;
+    --color-danger-light: #330000;
+  }
+}
